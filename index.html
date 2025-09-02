@@ -3,115 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Records - Sello Discográfico</title>
+    <title>Urban House Records</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Variables de colores y estilos */
         :root {
             --negro: #000000;
-            --negro-suave: #121212;
-            --gris-oscuro: #1E1E1E;
-            --gris-medio: #2D2D2D;
-            --gris: #3D3D3D;
-            --gris-claro: #7E7E7E;
-            --gris-muy-claro: #B0B0B0;
-            --blanco: #FFFFFF;
-            --destacado: #E0E0E0;
+            --negro-suave: #0a0a0a;
+            --gris-oscuro: #1a1a1a;
+            --gris-medio: #2a2a2a;
+            --gris: #3a3a3a;
+            --gris-claro: #7a7a7a;
+            --gris-muy-claro: #cccccc;
+            --blanco: #ffffff;
+            --destacado: #e5e5e5;
+            --acento: #ff3d00;
         }
 
-        /* Estilos generales */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
             background-color: var(--negro-suave);
             color: var(--blanco);
+            font-family: 'Raleway', sans-serif;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        a {
-            text-decoration: none;
-            color: var(--blanco);
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--gris-muy-claro);
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            background-color: transparent;
-            border: 1px solid var(--blanco);
-            color: var(--blanco);
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: var(--blanco);
-            color: var(--negro);
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            text-align: center;
-            position: relative;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--blanco);
-        }
-
-        /* Header y navegación */
+        /* Header */
         header {
             background-color: var(--negro);
-            padding: 20px 0;
+            padding: 15px 0;
             position: fixed;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
         }
 
-        .header-content {
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
             font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: 2px;
             text-transform: uppercase;
         }
 
-        .logo span {
-            color: var(--gris-muy-claro);
+        .logo-text span {
+            color: var(--acento);
         }
 
         .nav-links {
@@ -120,34 +91,49 @@
         }
 
         .nav-links li {
-            margin-left: 30px;
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--acento);
         }
 
         .hamburger {
             display: none;
             cursor: pointer;
+            font-size: 1.5rem;
         }
 
         /* Hero Section */
         .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
             display: flex;
             align-items: center;
             text-align: center;
-            padding-top: 80px;
+            padding: 100px 0 60px;
         }
 
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
+            padding: 20px;
         }
 
         .hero-title {
             font-size: 4rem;
             margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 5px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
         }
 
         .hero-subtitle {
@@ -156,13 +142,73 @@
             color: var(--gris-muy-claro);
         }
 
-        /* Artists Section */
-        .artists {
-            padding: 100px 0;
-            background-color: var(--gris-oscuro);
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: transparent;
+            border: 2px solid var(--blanco);
+            color: var(--blanco);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin: 10px;
         }
 
-        .artist-grid {
+        .btn:hover {
+            background-color: var(--blanco);
+            color: var(--negro);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-accent {
+            background-color: var(--acento);
+            border-color: var(--acento);
+            color: var(--blanco);
+        }
+
+        .btn-accent:hover {
+            background-color: transparent;
+            color: var(--acento);
+        }
+
+        /* Artists Section */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--acento);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--gris-muy-claro);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .artists-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 30px;
@@ -171,67 +217,93 @@
 
         .artist-card {
             background-color: var(--gris-medio);
-            border-radius: 5px;
+            border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
         }
 
         .artist-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
         }
 
         .artist-img {
             width: 100%;
             height: 300px;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .artist-card:hover .artist-img {
+            transform: scale(1.05);
         }
 
         .artist-info {
             padding: 20px;
+            text-align: center;
         }
 
         .artist-name {
             font-size: 1.5rem;
             margin-bottom: 10px;
+            color: var(--blanco);
         }
 
         .artist-genre {
-            color: var(--gris-muy-claro);
+            color: var(--acento);
             margin-bottom: 15px;
             font-style: italic;
         }
 
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            color: var(--blanco);
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--acento);
+        }
+
         /* Music Section */
         .music {
-            padding: 100px 0;
-            background-color: var(--negro-suave);
+            background-color: var(--gris-oscuro);
         }
 
         .album-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 30px;
-            margin-top: 50px;
         }
 
         .album {
-            width: 250px;
-            text-align: center;
+            background-color: var(--gris-medio);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .album:hover {
+            transform: translateY(-5px);
         }
 
         .album-cover {
             width: 100%;
             height: 250px;
             object-fit: cover;
-            margin-bottom: 15px;
-            border: 1px solid var(--gris);
-            transition: transform 0.3s ease;
         }
 
-        .album-cover:hover {
-            transform: scale(1.05);
+        .album-info {
+            padding: 15px;
+            text-align: center;
         }
 
         .album-title {
@@ -241,12 +313,12 @@
 
         .album-artist {
             color: var(--gris-muy-claro);
+            font-size: 0.9rem;
         }
 
         /* About Section */
         .about {
-            padding: 100px 0;
-            background-color: var(--gris-oscuro);
+            background-color: var(--negro-suave);
         }
 
         .about-content {
@@ -260,19 +332,22 @@
         }
 
         .about-title {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 20px;
+            color: var(--blanco);
         }
 
         .about-desc {
             margin-bottom: 20px;
             color: var(--gris-muy-claro);
+            line-height: 1.8;
         }
 
         .about-img {
             flex: 1;
-            border-radius: 5px;
+            border-radius: 10px;
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .about-img img {
@@ -283,8 +358,7 @@
 
         /* Contact Section */
         .contact {
-            padding: 100px 0;
-            background-color: var(--negro-suave);
+            background-color: var(--gris-oscuro);
         }
 
         .contact-content {
@@ -296,7 +370,7 @@
         .contact-info {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 25px;
         }
 
         .contact-item {
@@ -307,7 +381,14 @@
 
         .contact-icon {
             font-size: 1.5rem;
-            color: var(--gris-muy-claro);
+            color: var(--acento);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--gris-medio);
+            border-radius: 50%;
         }
 
         .contact-form {
@@ -319,15 +400,16 @@
         .form-group {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 8px;
         }
 
         .form-input {
-            padding: 12px 15px;
+            padding: 15px;
             background-color: var(--gris-medio);
             border: 1px solid var(--gris);
             color: var(--blanco);
-            border-radius: 3px;
+            border-radius: 5px;
+            font-family: 'Raleway', sans-serif;
         }
 
         textarea.form-input {
@@ -338,40 +420,63 @@
         /* Footer */
         footer {
             background-color: var(--negro);
-            padding: 50px 0 20px;
+            padding: 60px 0 30px;
         }
 
         .footer-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 30px;
+            gap: 40px;
         }
 
-        .social-links {
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        .footer-logo span {
+            color: var(--acento);
+        }
+
+        .footer-social {
             display: flex;
-            gap: 20px;
+            gap: 25px;
         }
 
-        .social-link {
-            font-size: 1.5rem;
-            color: var(--gris-muy-claro);
+        .footer-social a {
+            color: var(--blanco);
+            font-size: 1.8rem;
             transition: color 0.3s ease;
         }
 
-        .social-link:hover {
-            color: var(--blanco);
+        .footer-social a:hover {
+            color: var(--acento);
         }
 
         .copyright {
             color: var(--gris-claro);
             font-size: 0.9rem;
             text-align: center;
+            margin-top: 30px;
         }
 
         /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-img, .about-text {
+                flex: none;
+                width: 100%;
+            }
+        }
+
         @media (max-width: 768px) {
-            .header-content {
+            .header-container {
                 padding: 0 20px;
             }
 
@@ -401,28 +506,48 @@
             }
 
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
 
             .hero-subtitle {
                 font-size: 1.2rem;
             }
 
-            .about-content {
-                flex-direction: column;
-            }
-
             .section-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
+        }
+
+        /* Efectos de animación */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container header-content">
-            <div class="logo">Nexus<span>Records</span></div>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-text">Urban <span>House</span></div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#artistas">Artistas</a></li>
@@ -439,54 +564,64 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="container hero-content">
-            <h1 class="hero-title">Donde el talento encuentra su voz</h1>
-            <p class="hero-subtitle">Un sello discográfico dedicado a artistas excepcionales y sonidos innovadores</p>
-            <a href="#artistas" class="btn">Descubrir artistas</a>
+            <h1 class="hero-title fade-in">Urban House Records</h1>
+            <p class="hero-subtitle fade-in delay-1">Donde el talento urbano encuentra su hogar</p>
+            <div class="fade-in delay-2">
+                <a href="#artistas" class="btn">Descubrir artistas</a>
+                <a href="#contacto" class="btn btn-accent">Contactarnos</a>
+            </div>
         </div>
     </section>
 
     <!-- Artists Section -->
-    <section id="artistas" class="artists">
+    <section id="artistas" class="section">
         <div class="container">
             <h2 class="section-title">Nuestros Artistas</h2>
-            <div class="artist-grid">
+            <p class="section-subtitle">Descubre a los talentosos artistas que forman parte de nuestra familia musical</p>
+            
+            <div class="artists-grid">
                 <!-- Artista 1 -->
-                <div class="artist-card">
-                    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Artista 1" class="artist-img">
+                <div class="artist-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Sofia Reyes" class="artist-img">
                     <div class="artist-info">
                         <h3 class="artist-name">Sofia Reyes</h3>
                         <p class="artist-genre">Pop / Electrónica</p>
-                        <a href="#" class="btn">Escuchar</a>
+                        <p>Voz única y estilo innovador que fusiona sonidos urbanos con melodías pop.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Artista 2 -->
-                <div class="artist-card">
-                    <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Artista 2" class="artist-img">
+                <div class="artist-card fade-in delay-1">
+                    <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Carlos Vega" class="artist-img">
                     <div class="artist-info">
                         <h3 class="artist-name">Carlos Vega</h3>
                         <p class="artist-genre">Rock / Alternativo</p>
-                        <a href="#" class="btn">Escuchar</a>
+                        <p>Guitarrista excepcional con letras profundas que conectan con el alma.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Artista 3 -->
-                <div class="artist-card">
-                    <img src="https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Artista 3" class="artist-img">
+                <div class="artist-card fade-in delay-2">
+                    <img src="https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Luna García" class="artist-img">
                     <div class="artist-info">
                         <h3 class="artist-name">Luna García</h3>
                         <p class="artist-genre">R&B / Soul</p>
-                        <a href="#" class="btn">Escuchar</a>
-                    </div>
-                </div>
-                
-                <!-- Artista 4 -->
-                <div class="artist-card">
-                    <img src="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Artista 4" class="artist-img">
-                    <div class="artist-info">
-                        <h3 class="artist-name">Diego Morales</h3>
-                        <p class="artist-genre">Hip Hop / Rap</p>
-                        <a href="#" class="btn">Escuchar</a>
+                        <p>Voz sedosa y emocional que transporta a través de melodías soul y R&B.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -494,79 +629,98 @@
     </section>
 
     <!-- Music Section -->
-    <section id="musica" class="music">
+    <section id="musica" class="section music">
         <div class="container">
             <h2 class="section-title">Lanzamientos Recientes</h2>
+            <p class="section-subtitle">Explora las últimas producciones de nuestro sello discográfico</p>
+            
             <div class="album-container">
                 <!-- Álbum 1 -->
-                <div class="album">
-                    <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Álbum 1" class="album-cover">
-                    <h3 class="album-title">Noches Electricas</h3>
-                    <p class="album-artist">Sofia Reyes</p>
+                <div class="album fade-in">
+                    <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Noches Urbanas" class="album-cover">
+                    <div class="album-info">
+                        <h3 class="album-title">Noches Urbanas</h3>
+                        <p class="album-artist">Sofia Reyes</p>
+                    </div>
                 </div>
                 
                 <!-- Álbum 2 -->
-                <div class="album">
-                    <img src="https://images.unsplash.com/photo-1511735111819-9a3f7709049c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Álbum 2" class="album-cover">
-                    <h3 class="album-title">Camino Solitario</h3>
-                    <p class="album-artist">Carlos Vega</p>
+                <div class="album fade-in delay-1">
+                    <img src="https://images.unsplash.com/photo-1511735111819-9a3f7709049c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Sonidos de la Ciudad" class="album-cover">
+                    <div class="album-info">
+                        <h3 class="album-title">Sonidos de la Ciudad</h3>
+                        <p class="album-artist">Carlos Vega</p>
+                    </div>
                 </div>
                 
                 <!-- Álbum 3 -->
-                <div class="album">
-                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Álbum 3" class="album-cover">
-                    <h3 class="album-title">Alma Desnuda</h3>
-                    <p class="album-artist">Luna García</p>
+                <div class="album fade-in delay-2">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Alma Urbana" class="album-cover">
+                    <div class="album-info">
+                        <h3 class="album-title">Alma Urbana</h3>
+                        <p class="album-artist">Luna García</p>
+                    </div>
                 </div>
                 
                 <!-- Álbum 4 -->
-                <div class="album">
-                    <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Álbum 4" class="album-cover">
-                    <h3 class="album-title">Calles de la Ciudad</h3>
-                    <p class="album-artist">Diego Morales</p>
+                <div class="album fade-in delay-3">
+                    <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Ritmo Callejero" class="album-cover">
+                    <div class="album-info">
+                        <h3 class="album-title">Ritmo Callejero</h3>
+                        <p class="album-artist">Varios Artistas</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="nosotros" class="about">
+    <section id="nosotros" class="section about">
         <div class="container">
             <h2 class="section-title">Nuestra Historia</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3 class="about-title">Nexus Records: Conectando talento y audiencia desde 2010</h3>
-                    <p class="about-desc">Fundado en el corazón de la escena musical independiente, Nexus Records se ha dedicado a descubrir y promover artistas excepcionales que desafían los géneros y crean sonidos innovadores.</p>
-                    <p class="about-desc">Nuestra filosofía se centra en el desarrollo artístico auténtico, proporcionando a nuestros músicos los recursos y la libertad creativa necesarios para alcanzar su máximo potencial.</p>
+                    <h3 class="about-title">Urban House: El hogar de la música urbana</h3>
+                    <p class="about-desc">Fundado en 2010, Urban House Records se ha consolidado como el sello de referencia para artistas urbanos que buscan desarrollar su sonido único y conectar con audiencias globales.</p>
+                    <p class="about-desc">Nuestra filosofía se centra en el desarrollo artístico auténtico, proporcionando a nuestros músicos los recursos y la libertad creativa necesarios para alcanzar su máximo potencial en el panorama musical actual.</p>
+                    <p class="about-desc">Con instalaciones de vanguardia y un equipo de productores experimentados, ofrecemos un ambiente donde la creatividad florece y la innovación musical es la norma.</p>
                     <a href="#contacto" class="btn">Únete a nosotros</a>
                 </div>
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Estudio de grabación">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Estudio de grabación Urban House">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contacto" class="contact">
+    <section id="contacto" class="section contact">
         <div class="container">
             <h2 class="section-title">Contacto</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
                         <p>Av. de la Música 123, Ciudad Musical</p>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-phone contact-icon"></i>
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
                         <p>+1 234 567 890</p>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-envelope contact-icon"></i>
-                        <p>info@nexusrecords.com</p>
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <p>info@urbanhouserecords.com</p>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-clock contact-icon"></i>
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
                         <p>Lunes a Viernes: 9:00 - 18:00</p>
                     </div>
                 </div>
@@ -583,7 +737,7 @@
                     <div class="form-group">
                         <textarea class="form-input" placeholder="Mensaje" required></textarea>
                     </div>
-                    <button type="submit" class="btn">Enviar Mensaje</button>
+                    <button type="submit" class="btn btn-accent">Enviar Mensaje</button>
                 </form>
             </div>
         </div>
@@ -591,16 +745,18 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-content">
-            <div class="logo">Nexus<span>Records</span></div>
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Urban <span>House</span></div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                </div>
             </div>
-            <p class="copyright">© 2023 Nexus Records. Todos los derechos reservados.</p>
+            <p class="copyright">© 2023 Urban House Records. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -624,6 +780,31 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+            });
+        });
+
+        // Animación de elementos al hacer scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOptions = {
+                threshold: 0.3,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const fadeInObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, fadeInOptions);
+            
+            fadeElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transition = 'opacity 0.5s ease-in-out';
+                fadeInObserver.observe(element);
             });
         });
     </script>
